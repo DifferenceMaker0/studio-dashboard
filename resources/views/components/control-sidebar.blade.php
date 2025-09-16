@@ -1,0 +1,9 @@
+<aside class="control-sidebar control-sidebar-dark" style="display: none;"> 
+<!-- Control Sidebar -->
+    <!-- Control sidebar content goes here -->
+    <!-- <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+    </div> -->
+<!-- /.control-sidebar -->
+</aside>

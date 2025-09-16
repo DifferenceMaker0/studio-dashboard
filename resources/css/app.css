@@ -1,0 +1,79 @@
+
+/* <button class="button-71" role="button"> Button 71</button> */
+.button-71 {
+    background: linear-gradient(90deg, #1e1e1f 0, #626569);
+    opacity: 100%; 
+    border-top: 2px;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+   /* font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif; font-size: 11px; font-weight: 600;*/
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;  
+}
+
+    .button-71:before {
+        z-index: -2;
+        content: "";
+        background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
+        position: absolute;
+        bottom: -3px;
+        left: -2px;
+        background-size: 400%; 
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-button-85 40s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 125px;
+    }
+ 
+    .button-71:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        /*#222;*/
+        left: 0;
+        top: 0;
+        border-radius: 125px;
+        /*border-radius: 10px;*/
+    }
+
+    .button-71:hover {
+        box-shadow: rgba(27, 26, 26, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+        /*transform: scale(1.05);*/
+    }
+
+    .button-71:active {
+        transform: scale(.95) 0.2s linear;
+    }
+
+@media (min-width: 768px) {
+    .button-71 {
+        padding: 8px 24px;
+    }
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
