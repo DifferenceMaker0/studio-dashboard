@@ -25,3 +25,4 @@ documents/
 storage/app/public/**
 node_modules.zip
 vendor.zip
+public/uploads/
