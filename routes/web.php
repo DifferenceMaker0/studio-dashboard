@@ -17,16 +17,8 @@ Route::get('/posts/{id}', [PostsController::class, 'show'])->name('posts.show');
 Route::resource('posts', PostsController::class);
 Route::resource('posts', PostsController::class)
     ->only(['edit', 'destroy', 'update', 'create'])
-    ->middleware('auth'); 
-
-
-// Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
-// Route::get('/posts/read/{id}', [PostsController::class, 'read'])->name('posts.read');
-// Route::post('/posts/{post}', [PostsController::class, 'store']);
-
-// Route::post('/logout', [DashboardController::class, 'logout'])->name('logout');
-
-
+    ->middleware('auth');  
+    
 
 Route::get('/', function () {
     return view('profile');

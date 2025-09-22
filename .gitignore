@@ -20,6 +20,6 @@
 /storage/pail
 Homestead.json
 Homestead.yaml
-Thumbs.db  
-hosted/
+Thumbs.db   
 documents/
+storage/app/public/**

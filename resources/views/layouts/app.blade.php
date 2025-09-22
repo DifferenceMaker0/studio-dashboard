@@ -14,15 +14,15 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style --><!-- Use Version 6.9 For Customized Implementation -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css?v=6.9">  
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css?v=6.9">  
   <!-- Full Calendar --><!-- Used With CustomCode, MomentJS, FullCalendarJS -->
-  <link rel="stylesheet" href="plugins/fullcalendar/main.css">
+  <link rel="stylesheet" href="/plugins/fullcalendar/main.css">
   <!-- overlayScrollbars --><!-- Used With Theme Fixed -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- dropzonejs -->
-  <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
+  <link rel="stylesheet" href="/plugins/dropzone/min/dropzone.min.css">
   <!-- Ionicons --><!-- Used With Widgets -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> 
 
@@ -60,20 +60,20 @@
 </div>  
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script> 
+<script src="/plugins/jquery-ui/jquery-ui.min.js"></script> 
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script> 
+<script src="/dist/js/adminlte.min.js"></script> 
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script> 
+<script src="/dist/js/demo.js"></script> 
 <!-- fullCalendar 2.2.5 -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/fullcalendar/main.js"></script> 
+<script src="/plugins/moment/moment.min.js"></script>
+<script src="/plugins/fullcalendar/main.js"></script> 
 <!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
 
 <!-- Full Calendar -->
