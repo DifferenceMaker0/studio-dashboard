@@ -7,27 +7,7 @@
           <!-- <i class="fas fa-bars"></i> -->
         </a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('starter') }}" class="nav-link {{ request()->routeIs('starter') ? 'active disabled' : '' }}"><span>Starter</span> <i class="far fa-hdd"></i></a>
-      </li> 
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('profile') }}" class="nav-link {{ request()->routeIs('profile') ? 'active disabled' : '' }}">Profile <i class="far fa-user-circle"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('contacts') }}" class="nav-link {{ request()->is('contacts*') ? 'active disabled' : '' }}">Contacts <i class="far fa-list-alt"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('calendar') }}" class="nav-link {{ request()->is('calendar*') ? 'active disabled' : '' }}">Calendar <i class="far fa-calendar-times"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('widgets') }}" class="nav-link {{ request()->routeIs('widgets') ? 'active disabled' : '' }}">Widgets <i class="far fa-calendar-times"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('buttons') }}" class="nav-link {{ request()->routeIs('buttons') ? 'active disabled' : '' }}"><span>Buttons <i class="far fa-play-circle"></i></span></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ route('studio') }}" class="nav-link"><button type="button" class="btn  btn-outline-secondary btn-xs">Enter Studio</button></a> 
-      </li>
+      
     </ul> 
     
     <!-- Right navbar links --> 

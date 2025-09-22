@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Page2 Studio</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
   
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -33,15 +38,7 @@
   <x-control-sidebar2/>
   </div>
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Shape The Future Of Publishing
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright © 2025-2026 <a href="https://collabstudio.online/studio">CollabStudio.online</a>.</strong> All rights reserved.
-  </footer>
+  <x-footer-alt />
 
 </div> 
 

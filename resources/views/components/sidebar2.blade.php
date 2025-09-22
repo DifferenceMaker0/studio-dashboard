@@ -34,36 +34,109 @@
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar nav-child-indent nav-compact flex-column" data-widget="treeview" role="menu" data-accordion="false">
     <!-- Add icons to the links using the .nav-icon class
-    with font-awesome or any other icon font library -->
-    <li class="nav-item">
-    <a href="#" class="nav-link">
-    <i class="nav-icon fas fa-tachometer-alt"></i>
-    <p>
-    Dashboard
-    <i class="right fas fa-angle-left"></i>
-    </p>
-    </a>
-    <ul class="nav nav-treeview">
-    <li class="nav-item">
-    <a href="../index.html" class="nav-link">
-    <i class="far fa-circle nav-icon"></i>
-    <p>Dashboard v1</p>
-    </a>
-    </li>
-    <li class="nav-item">
-    <a href="../index2.html" class="nav-link">
-    <i class="far fa-circle nav-icon"></i>
-    <p>Dashboard v2</p>
-    </a>
-    </li>
-    <li class="nav-item">
-    <a href="../index3.html" class="nav-link">
-    <i class="far fa-circle nav-icon"></i>
-    <p>Dashboard v3</p>
-    </a>
-    </li>
-    </ul>
-    </li>
+    with font-awesome or any other icon font library --> 
+      <li class="nav-header">NAVIGATION 
+        <a href="{{ route('profile') }}" class="nav-link"> 
+          <button type="button" class="btn  btn-outline-secondary btn-xs">
+            <i class="nav-icon fas fa-users-cog"></i>
+            Back to Profile 
+          </button>
+        </a> 
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('studio') }}" class="nav-link"> 
+          <i class="nav-icon fas fa-digital-tachograph" style="color: #9d11e8;"></i>
+          {{-- <i class="nav-icon fas fa-digital-tachograph"></i> --}}
+          <p>Studio</p>
+        </a>
+      </li> 
+      <li class="nav-item">
+        <a href="{{  route('builds.production') }}" class="nav-link">
+          <i class="nav-icon fas fa-pencil-alt"></i>
+          <p>Production Editor</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('builds.production-details') }}" class="nav-link">
+          <i class="nav-icon fas fa-newspaper"></i>
+          <p>Production Details</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('builds.timeline') }}" class="nav-link">
+          <i class="nav-icon far fa-chart-bar"></i>
+          <p>Timeline</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{  route('compose') }}" class="nav-link">
+          <i class="nav-icon far fa-paper-plane"></i>
+          <p>Compose</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('inbox') }}" class="nav-link">
+          <i class="nav-icon far fa-envelope"></i>
+          <p>Inbox</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('read') }}" class="nav-link">
+          <i class="nav-icon far fa-envelope-open"></i>
+          <p>Read</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('merch') }}" class="nav-link">
+          <i class="nav-icon far fa-money-bill-alt"></i> 
+          <p>Merch</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('invoice') }}" class="nav-link">
+          <i class="nav-icon far fa-file-word"></i>
+          <p>Invoice</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{  route('invoice-print') }}" class="nav-link">
+          <i class="nav-icon far fa-file-pdf"></i>
+          <p>Invoice Print</p>
+        </a>
+      </li>  
+        
+
+        <li class="nav-header">DEMOS</li> 
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Dashboard v1</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index2.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Dashboard v2</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index3.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Dashboard v3</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
     <li class="nav-item">
     <a href="widgets.html" class="nav-link">
     <i class="nav-icon fas fa-th"></i>

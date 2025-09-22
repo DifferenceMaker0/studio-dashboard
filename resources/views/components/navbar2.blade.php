@@ -1,43 +1,9 @@
 <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-dark">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('studio') }}" class="nav-link">Studio</a>
-      </li> 
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('builds.production') }}" class="nav-link">Production Editor</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('builds.production-details') }}" class="nav-link">Production Details</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('builds.timeline') }}" class="nav-link">Timeline</a>
-      </li>
-
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('compose') }}" class="nav-link">Compose</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('inbox') }}" class="nav-link">Inbox</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('read') }}" class="nav-link">Read</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('merch') }}" class="nav-link">Merch</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('invoice') }}" class="nav-link">Invoice</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('invoice-print') }}" class="nav-link">Invoice Print<i class="fa fa-print" aria-hidden="true"></i></a>
-      </li> 
-    </ul> 
-<a href="{{ route('profile') }}">Back to Profile</a>
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->

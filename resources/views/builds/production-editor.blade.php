@@ -38,12 +38,13 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">Studio Productions</label>
-                <input type="text" id="inputName" class="form-control" value="AdminLTE">
+                <input type="text" id="inputName" class="form-control" value="Jorts - Jort Shorts">
               </div>
               <div class="form-group">
                 <label for="inputDescription">Project Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
-              </div>
+                <textarea id="inputDescription" class="form-control" rows="4">Raw denim jorts. You probably haven't heard of them jean shorts Austin. Check out the link to learn more.</textarea>
+                <h3><a href="https://www.facebook.com/share/r/1B2yxR1trX/" target="_blank">Let's Jort</a></h3>
+              </div> 
               <div class="form-group">
                 <label for="inputStatus">Status</label>
                 <select id="inputStatus" class="form-control custom-select">

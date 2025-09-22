@@ -1,23 +1,30 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\DashboardController;
+ 
+Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
+Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
+Route::post('/posts/store', [PostsController::class, 'store'])->name('posts.store');
+Route::put('/posts/{id}/edit', [PostsController::class, 'update'])->name('posts.edit');
+Route::delete('/posts/{id}/edit', [PostsController::class, 'destroy'])->name('posts.destroy');
+Route::middleware('auth')->group(function () {
+    Route::get('/posts/dashboard', [DashboardController::class, 'index'])->name('posts.dashboard'); 
+}); 
+Route::get('/posts/{id}', [PostsController::class, 'show'])->name('posts.show');
+
+Route::resource('posts', PostsController::class);
+Route::resource('posts', PostsController::class)
+    ->only(['edit', 'destroy', 'update', 'create'])
+    ->middleware('auth'); 
 
 
-Route::get('/login', function () {
-    return view('verify.login');
-})->name('login');
+// Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
+// Route::get('/posts/read/{id}', [PostsController::class, 'read'])->name('posts.read');
+// Route::post('/posts/{post}', [PostsController::class, 'store']);
 
-Route::get('/register', function () {
-    return view('verify.register');
-})->name('register');
-
-Route::get('/forgot-password', function () {
-    return view('verify.forgot-password');
-})->name('forgot-password');
-
-Route::get('/recover-password', function () {
-    return view('verify.recover-password');
-})->name('recover-password');
+// Route::post('/logout', [DashboardController::class, 'logout'])->name('logout');
 
 
 

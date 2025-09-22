@@ -72,7 +72,7 @@
                   <h4>Recent Activity</h4>
                     <div class="post">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                        <img class="img-circle img-bordered-sm" src="../dist/img/user1-128x128.jpg" alt="user image">
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>
@@ -92,7 +92,7 @@
 
                     <div class="post clearfix">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
+                        <img class="img-circle img-bordered-sm" src="../dist/img/user7-128x128.jpg" alt="User Image">
                         <span class="username">
                           <a href="#">Sarah Ross</a>
                         </span>
@@ -111,7 +111,7 @@
 
                     <div class="post">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                        <img class="img-circle img-bordered-sm" src="../dist/img/user1-128x128.jpg" alt="user image">
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>
@@ -132,20 +132,26 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> AdminLTE v3</h3>
-              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> Jorts v3</h3>
+              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts.</p>
               <br>
               <div class="text-muted">
                 <p class="text-sm">Client Company
                   <b class="d-block">Deveint Inc</b>
                 </p>
                 <p class="text-sm">Project Leader
-                  <b class="d-block">Tony Chicken</b>
+                  <b class="d-block">Modern Artisan</b>
+                </p>
+                <p class="text-sm">Project Link
+                  <a href="https://www.facebook.com/share/r/1B2yxR1trX/" class="btn-link"><b class="d-block"><i class="fas fa-link mr-1"></i>Project Jorts</b></a>
                 </p>
               </div>
 
               <h5 class="mt-5 text-muted">Project files</h5>
               <ul class="list-unstyled">
+                <li>
+                  
+                </li>
                 <li>
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
                 </li>

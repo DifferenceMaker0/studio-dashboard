@@ -10,232 +10,21 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/regular.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css?v=3.2.0">
 
           <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @endif
-
+        @endif 
 
 </head>
 <body class="sidebar-mini" style="height: auto;">
-<div class="wrapper">
-
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('profile') }}" class="nav-link">Profile</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{  route('studio') }}" class="nav-link">Studio</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div><div class="sidebar-search-results"><div class="list-group"><a href="#" class="list-group-item"><div class="search-title"><strong class="text-light"></strong>N<strong class="text-light"></strong>o<strong class="text-light"></strong> <strong class="text-light"></strong>e<strong class="text-light"></strong>l<strong class="text-light"></strong>e<strong class="text-light"></strong>m<strong class="text-light"></strong>e<strong class="text-light"></strong>n<strong class="text-light"></strong>t<strong class="text-light"></strong> <strong class="text-light"></strong>f<strong class="text-light"></strong>o<strong class="text-light"></strong>u<strong class="text-light"></strong>n<strong class="text-light"></strong>d<strong class="text-light"></strong>!<strong class="text-light"></strong></div><div class="search-path"></div></a></div></div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Starter Pages
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Active Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inactive Page</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+<div class="wrapper"> 
+   
+  <x-starter::navbar />
+  <x-starter::sidebar />
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="min-height: 818.667px;">
@@ -259,12 +48,18 @@
 
     <!-- Main content -->
     <div class="content">
+      <!-- Main Container -->
       <div class="container-fluid">
+
+        <!-- Row #1 -->
         <div class="row">
+          <!-- #1.a 6-col -->
           <div class="col-lg-6">
+            <span>Col 6 </span>
+            <!-- a Card -->
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Row 1 Card 1</h5>
 
                 <p class="card-text">
                   Some quick example text to build on the card title and make up the bulk of the card's
@@ -274,8 +69,9 @@
                 <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a>
               </div>
-            </div>
+            </div><!-- /.a.card -->
 
+            <!-- b Card -->
             <div class="card card-primary card-outline">
               <div class="card-body">
 
@@ -285,7 +81,7 @@
                   </div>
                 </div>
 
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Row 1 Card 2</h5>
 
                 <p class="card-text">
                   Some quick example text to build on the card title and make up the bulk of the card's
@@ -294,25 +90,28 @@
                 <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a>
               </div>
-            </div><!-- /.card -->
+            </div><!-- /b.card -->
 
+            <!-- c 4-col -->
             <div class="col-sm-4">
-              <div class="position-relative p-3 bg-gray" style="height: 180px">
-
+              <span>Col-sm-4</span>
+              <!-- Ribbon Box -->
+              <div class="position-relative p-3 bg-gray" style="height: 180px"> 
                 <div class="ribbon-wrapper ribbon-lg">
                   <div class="ribbon bg-info">
                     Ribbon Large
                   </div>
                 </div>
-
-                Ribbon Large <br />
+                <span>Ribbon Large</span> 
+                <br />
                 <small>.ribbon-wrapper.ribbon-lg .ribbon</small>
-              </div>
-            </div>
+              </div><!-- /.ribbonBox -->
+            </div><!-- /.c.col-md-4 --> 
+          </div><!-- /.1.a.col-md-6 -->
 
-          </div>
-          <!-- /.col-md-6 -->
+          <!-- #1.b 6-col -->
           <div class="col-lg-6">
+            <!-- a Card -->
             <div class="card">
               <div class="card-header">
                 <h5 class="m-0">Featured</h5>
@@ -330,8 +129,9 @@
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-            </div>
+            </div><!-- /a.card -->
 
+            <!-- b Card -->
             <div class="card card-primary card-outline">
               <div class="card-header">
                 <h5 class="m-0">Featured</h5>
@@ -342,42 +142,127 @@
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+            </div><!-- /.b.card -->
+          </div><!-- /.1.b.col-md-6 -->
+        </div><!-- /#1.row --> 
+
+        <!-- Row #2 -->
+        <div class="row">
+          <!-- #2.a 6-col -->
+          <div class="col-lg-6">
+
+            <!-- a Progressbar -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+            </div><!-- /.a.progressbar --> 
+
+            <div style="display:block;position:relative;width:100%;border:1px solid black;">
+            <!-- b vstack -->
+<div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <button class="nav-link active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+      <button class="nav-link" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+      <button class="nav-link" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+      <button class="nav-link" id="v-pills-settings-tab" data-toggle="pill" data-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
     </div>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark" style="display: none;">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><i class="fa fa-home" aria-hidden="true"></i>Home</div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><i class="fa fa-user" aria-hidden="true"></i>Profile </div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><i class="fa fa-microphone-slash" aria-hidden="true"></i>Messages</div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>Settings</div>
     </div>
-  </aside>
-  <!-- /.control-sidebar -->
+  </div>
+</div><!-- /.b.vstack -->
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
-<div id="sidebar-overlay"></div>
-</div>
-<!-- ./wrapper -->
+            <div class="hstack gap-3">
+              <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
+              <button type="button" class="btn btn-secondary">Submit</button>
+              <div class="vr"></div>
+              <button type="button" class="btn btn-outline-danger">Reset</button>
+            </div>
+            </div>
+
+          </div><!-- /2.a.col-md-6 -->
+
+          <!-- #2.b 6-col -->
+          <div class="col-lg-6">
+
+            <!-- a Progressbar -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+            </div><!-- /.a.progressbar --> 
+
+          </div><!-- /2.b.col-md-6 --> 
+        </div><!-- /#2.row --> 
+
+        <!-- Row #3 -->
+        <div class="row">
+          <!-- #3.a 6-col -->
+          <div class="col-lg-6"> 
+
+            <!-- -->
+            <div>  
+            </div><!-- /.a. --> 
+
+            <!-- b -->
+            <div></div><!-- /.b. -->
+
+          </div><!-- /#3.a.col-md-6 -->
+
+          <!-- #3.b 6-col -->
+          <div class="col-lg-6"> 
+
+            <!-- a -->
+            <div></div><!-- /.a. -->
+
+            <!-- b -->
+            <div></div><!-- /.b. -->
+
+          </div><!-- /#3.b.col-md-6 --> 
+        </div><!-- /#3.row --> 
+
+        <!-- Row #4 -->
+        <div class="row">
+          <!-- #4.a 6-col -->
+          <div class="col-lg-6"> 
+
+            <!-- a -->
+            <div></div><!-- /.a. -->
+
+            <!-- b -->
+            <div></div><!-- /.b. -->
+
+          </div><!-- /#4.a.col-md-6 -->
+
+          <!-- #4.b 6-col -->
+          <div class="col-lg-6"> 
+
+            <!-- a -->
+            <div></div><!-- /.a. -->
+
+            <!-- b -->
+            <div></div><!-- /.b. -->
+
+          </div><!-- /#4.b.col-md-6 -->
+        </div><!-- /#4.row -->
+
+      </div><!-- /.main-container-fluid -->
+    </div><!-- /.main-content -->
+
+  </div><!-- /.content-wrapper --> 
+ 
+  <x-starter::control-sidebar />
+  <x-starter::footer />
+  <div id="sidebar-overlay"></div>
+
+</div><!-- ./wrapper -->
+
+
 
 <!-- REQUIRED SCRIPTS -->
-
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

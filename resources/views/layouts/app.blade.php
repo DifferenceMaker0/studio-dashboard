@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>SPA Client</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
@@ -27,40 +32,11 @@
         @endif
    
 <style>  
-  :root{--icon-color:rgba(27, 181, 216, 1);--icon-color-light:rgba(23, 162, 184, 1);--static-blue: rgba(8, 146, 253, 1);--static-maroon: #d81b60;--static-pink:#ff0080;--bg-gradient-aluminum:linear-gradient(5deg, #b5b5b54d 10%, hsla(0, 0%, 58%, 0.4) 30%, #ffffffff);  }
 
-  html{
-    cursor: url("dist/img/12pxCursor.svg"), default; 
-  } 
-  a:hover, i:hover{
-    cursor: url("dist/img/Pointer2.svg"), pointer; 
-  }
-  
-
-  .navbar-nav .nav-link.active {  
-    border-bottom: 1px ridge #d81b60; 
-    border-left:1px inset #d81b60;
-    border-right:1px groove #d81b60; 
-    text-shadow:-1px 1px 2px rgba(0,0,0,0.4);
-    box-shadow:-1px 2px 3px 0px rgba(0,0,0,0.2);
-    border-radius:12px; 
-    background-image: linear-gradient(5deg, #b5b5b54d 10%, hsla(0, 0%, 58%, 0.4) 30%, #ffffffff); 
-  }
-  .navbar-nav .nav-link.disabled {
-    pointer-events: none; 
-  } 
-  .nav-item .nav-link.active i{
-    text-shadow:0px 1px 0px rgba(23,162,184,0.3);
-  }
-  .nav-item .nav-link i{ 
-    color: var(--icon-color);  
-  } 
-  .nav-item .nav-link:hover:not(.active-link) i{text-shadow:0px 1px 0px rgba(23,162,184,0.3);}
-  .bg-aluminum{background-image:var(--bg-gradient-aluminum);}
 </style>
 
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed" style="height: auto;"> 
+<body class="sidebar-mini layout-navbar-fixed layout-fixed" style="height: auto;"> 
 
 <div class="wrapper" id="top">
 <!-- Preloader -->
@@ -72,25 +48,15 @@
     <x-sidebar/>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-    
+    <main class="content-wrapper">
+      @include('includes.messages')
       @yield('content') 
     
-    </div>
+    </main>
     <!-- /.content-wrapper --> 
 
       <x-control-sidebar/>  
-      
-    <!-- Main Footer -->
-  <footer class="main-footer"> 
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Make Your Future Creative!
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright © 2025-2026 <a href="https://collabstudio.online/studio">CollabStudio.online</a>.</strong> All rights reserved.
-  </footer>
-
+      <x-footer /> 
 </div>  
 
 <!-- jQuery -->
@@ -100,7 +66,7 @@
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js?"></script> 
+<script src="dist/js/adminlte.min.js"></script> 
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script> 
 <!-- fullCalendar 2.2.5 -->
