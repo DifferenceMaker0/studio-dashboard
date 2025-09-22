@@ -71,11 +71,12 @@ class PostsController extends Controller
             // Filename to store
             $fileNameToStore= $filename.'_'.time().'.'.$extension;  
             // Upload Image
-            $path = $request->file('cover_image')->storeAs('original', $fileNameToStore); 
+            $image = $request->file('cover_image'); 
+            Storage::disk('uploads')->putFileAs('', $image, $fileNameToStore);
             
             $cover_image = $request->file('cover_image');
             $tn = $manager->read($cover_image);
-            $tn->scale(width: 300); 
+            $tn->scale(width: 100); 
              
             // $tn = Image::make($cover_image);
             // $tn->widen(150);
@@ -84,7 +85,7 @@ class PostsController extends Controller
             // $tn = Image::read($cover_image)->resize(80, 80);
             $randomizer = Str::random() . '.' . $cover_image->getClientOriginalExtension();
             $thumbnailer = $tn->encodeByExtension($cover_image->getClientOriginalExtension(), quality:70);
-            Storage::put('thumbnails/'.$randomizer, $thumbnailer);  
+            Storage::disk('uploads')->put('thumbnails/'.$randomizer, $thumbnailer);  
             } else {
                 $fileNameToStore = 'noimage.png';
                 $randomizer = 'noimage.jpg';
@@ -143,6 +144,7 @@ $post->save();
      */
     public function update(Request $request, string $id)
     {
+        $manager = new ImageManager(new Driver());
         $validated = $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -159,15 +161,16 @@ $post->save();
             // Filename to store
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             // Upload Image
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            $image = $request->file('cover_image'); 
+            Storage::disk('uploads')->putFileAs('', $image, $fileNameToStore);
             // Delete file if exists
-            Storage::delete('public/cover_images/'.$post->cover_image);
-		
+            Storage::disk('uploads')->delete('public/uploads/'.$post->cover_image);
+		 
 	   //Make thumbnails
 	    $thumbStore = 'thumb.'.$filename.'_'.time().'.'.$extension;
             $thumb = Image::make($request->file('cover_image')->getRealPath());
-            $thumb->resize(80, 80);
-            $thumb->save('storage/cover_images/'.$thumbStore);
+            $thumb->scale(width: 100);
+            Storage::disk('uploads')->putFileAs('', $thumb, $thumbStore); 
 		
         }
 

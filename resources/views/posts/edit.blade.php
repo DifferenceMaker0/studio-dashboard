@@ -5,7 +5,7 @@
     {!! html()->form()->open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
             {{html()->label('cover_image', 'Cover Image')}} 
-            <img src="/thumbnails/{{$post->thumbnail}}" />
+            <img src="{{asset('uploads/thumbnails/'. $post->thumbnail ) }}" />
         </div>
         <div class="form-group">
             {{html()->label('title', 'Title')}}
